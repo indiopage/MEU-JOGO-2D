@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Pool - 2 Players</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-wrapper">
+
+        <header>
+            <h1>🎱 PIXEL POOL</h1>
+
+            <div class="players">
+                <div class="player active" id="player1">
+                    <span>PLAYER 1</span>
+                    <strong id="score1">0</strong>
+                </div>
+
+                <div class="turn" id="turnText">
+                    VEZ DO PLAYER 1
+                </div>
+
+                <div class="player" id="player2">
+                    <span>PLAYER 2</span>
+                    <strong id="score2">0</strong>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="table-container">
+                <canvas id="gameCanvas" width="1000" height="560"></canvas>
+            </div>
+
+            <div class="controls">
+                <p>
+                    <b>CONTROLES:</b>
+                    Mouse = mirar |
+                    Segure o botão esquerdo = força |
+                    Solte = tacada
+                </p>
+
+                <button id="newGame">NOVO JOGO</button>
+            </div>
+        </main>
+
+        <div id="message" class="message">
+            PLAYER 1 COMEÇA!
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

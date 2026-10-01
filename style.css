@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background:
+        linear-gradient(rgba(20, 20, 35, 0.8), rgba(20, 20, 35, 0.8)),
+        repeating-linear-gradient(
+            0deg,
+            #171727 0px,
+            #171727 4px,
+            #1b1b30 4px,
+            #1b1b30 8px
+        );
+
+    min-height: 100vh;
+    color: white;
+    font-family: "Press Start 2P", monospace;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    image-rendering: pixelated;
+}
+
+.game-wrapper {
+    width: min(1100px, 96vw);
+    text-align: center;
+}
+
+h1 {
+    color: #ffd93d;
+    font-size: clamp(20px, 4vw, 38px);
+
+    margin-bottom: 25px;
+
+    text-shadow:
+        4px 4px 0 #7a4300,
+        0 0 10px #ff9d00;
+}
+
+.players {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.player {
+    width: 220px;
+
+    background: #292944;
+    border: 5px solid #11111c;
+
+    padding: 15px;
+
+    box-shadow:
+        5px 5px 0 #000;
+
+    color: #777;
+}
+
+.player span {
+    display: block;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.player strong {
+    font-size: 25px;
+    color: #fff;
+}
+
+.player.active {
+    border-color: #ffd93d;
+    color: #ffd93d;
+
+    box-shadow:
+        5px 5px 0 #000,
+        0 0 15px #ffd93d;
+}
+
+.turn {
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.table-container {
+    width: 100%;
+    overflow: hidden;
+
+    padding: 18px;
+
+    background: #7b431d;
+
+    border: 8px solid #3b1c0c;
+
+    box-shadow:
+        inset 0 0 0 5px #b9692b,
+        10px 10px 0 #000;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    background: #075c38;
+
+    image-rendering: pixelated;
+    cursor: crosshair;
+}
+
+.controls {
+    margin-top: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.controls p {
+    color: #aaa;
+    font-size: 9px;
+    line-height: 2;
+    text-align: left;
+}
+
+button {
+    font-family: "Press Start 2P", monospace;
+
+    background: #ff4757;
+    color: white;
+
+    border: 4px solid #7e1721;
+
+    padding: 15px 20px;
+
+    cursor: pointer;
+
+    box-shadow: 5px 5px 0 #000;
+
+    transition: 0.1s;
+}
+
+button:hover {
+    background: #ff6b78;
+}
+
+button:active {
+    transform: translate(5px, 5px);
+    box-shadow: 0 0 0 #000;
+}
+
+.message {
+    margin-top: 20px;
+
+    color: #ffd93d;
+
+    font-size: 11px;
+
+    min-height: 20px;
+}
+
+@media (max-width: 700px) {
+
+    .players {
+        flex-direction: column;
+    }
+
+    .player {
+        width: 100%;
+    }
+
+    .turn {
+        order: -1;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .controls p {
+        text-align: center;
+    }
+}
